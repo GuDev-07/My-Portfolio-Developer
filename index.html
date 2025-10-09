@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!--FIM GOOGLE FONTS-->
+
+  <!--ICONS GOOGLE-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+  <!--FIM DO ICONS GOOGLE-->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <title>Gustavo Full Stack | Portfolio</title>
+</head>
+
+<body>
+  <nav class="navigation">
+    <div class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <i class="menu-icon">☰</i>
+    </div>
+    <div class="btnClose">
+      <button class="menu-toggle close">&times; </button> <!-- Ícone X -->
+    </div>
+
+    <ul class="menu">
+      <li><a href="#home" class="menu-link">Início</a></li>
+      <li><a href="#about" class="menu-link">Me conheça</a></li>
+      <li><a href="#metricas" class="menu-link">Metricas</a></li>
+      <li><a href="#projects" class="menu-link">Projetos</a></li>
+      <li><a href="#recomendações" class="menu-link">Recomendações</a></li>
+      <li><a href="#contact" class="menu-link">Contato</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="header">
+    <div class="container">
+      <div class="box-wrapper">
+        <div class="box">
+          <h3 class="welcome-message">OLÁ, EU SOU <span>GUSTAVO</span></h3>
+          <h1 class="welcome-title">FULL STACK DEVELOPER</h1>
+          <p class="welcome-text"> Javascript | Node.js | SQL | ASP.NET
+          </p>
+
+          <a href="docs/curriculo-gustavo.pdf" download class="btn-download">
+            <i class="ri-folder-fill"></i> Baixar Currículo
+          </a>
+
+        </div>
+
+        <div class="image-box">
+          <img src="images/header-capa.png" alt="Sobre mim">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SEÇÃO SOBRE MIM -->
+  <section id="about" class="about reveal">
+    <div class="container">
+      <div class="about-content">
+        <div class="video-about">
+          <div class="video-frame">
+            <video controls poster="images/video-thumbnail.jpg">
+              <source src="images/video-about.mp4" type="video/mp4">
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <h1 class="about-title">
+            SOBRE <span>MIM</span>
+          </h1>
+          <p class="about-description">
+            Desenvolvedor Full stack especializado em criar soluções eficazes, desde landing-pages á sistemas robustos
+            conforme o negócio. Crio grandes projetos, utilizando tecnologias modernas como Node.js,
+            Express.js, Javascript, Python, Bootstrap e C#.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIM DA SEÇÃO SOBRE MIM -->
+
+  <section id="metricas" class="metrics-section reveal">
+    <h2>MEU <span>DESEMPENHO</span></h2>
+    <div class="metrics-container">
+      <div class="metric">
+        <h3 data-target="50">
+          </p>0</h3>
+        <p>Noites em claro</p>
+      </div>
+      <div class="metric">
+        <h3 data-target="250">0</h3>
+        <p>Commits em projetos reais</p>
+      </div>
+      <div class="metric">
+        <h3 data-target="100">0</h3>
+        <p>Horas em cursos de aprendizado</p>
+      </div>
+      <div class="metric">
+        <h3 data-target="200">0</h3>
+        <p>Bugs corrigidos</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="projects" class="projects-section reveal">
+    <h2>MEUS <span>PROJETOS</span></h2>
+    <div class="container swiper">
+      <div class="card-wrapper">
+        <ul class="card-list swiper-wrapper">
+
+
+          <!--PROJETO1-->
+          <li class="card-item swiper-slide">
+            <a href="https://github.com/GuDev-07/Generate-Password" class="card-link">
+              <img src="images/project-password.png" alt="card-image-table" class="card-image">
+              <p class="badge password">Gerador de senhas</p>
+              <h3 class="card-title">Uma aplicação web que gera senhas seguras. Elas são sorteadas e personalizadas
+                conforme o desejo do usuário</h3>
+              <div class="tech-icons">
+                <p class="ferrament-text"></p>
+                <img src="images/html-icon.png" alt="HTML" title="HTML">
+                <img src="images/icon-css.png" alt="CSS" title="CSS">
+                <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                <img src="images/icon-vercel.png" alt="vercel" title="Vercel">
+                <img src="images/icon-git.png" alt="git" title="Git">
+              </div>
+              <button class="card-button 
+              material-symbols-outlined">arrow_forward</button>
+            </a>
+          </li>
+
+          <!--PROJETO2-->
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/car1-example.jpg" alt="card-image-table" class="card-image">
+              <p class="badge">Calculadora de IMC</p>
+              <h3 class="card-title">Projeto web simples que calcula IMC do usuário com base em informações de peso e
+                altura.</h3>
+              <div class="tech-icons">
+                <p class="ferrament-text"></p>
+                <img src="images/html-icon.png" alt="HTML" title="HTML">
+                <img src="images/icon-css.png" alt="CSS" title="CSS">
+                <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                <img src="images/icon-vercel.png" alt="vercel" title="Vercel">
+                <img src="images/icon-git.png" alt="git" title="Git">
+              </div>
+              <button class="card-button 
+              material-symbols-outlined">arrow_forward</button>
+            </a>
+          </li>
+
+          <!--PROJETO3-->
+          <li class="card-item swiper-slide">
+            <a href="https://www.linkedin.com/posts/jesus-gustavo_nodejs-expressjs-postman-activity-7378873093835882497-SEoG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEkAE7QByPAW3D1mFKjXbd2IJXogO9gAMTY"
+              class="card-link">
+              <img src="images/car1-example.jpg" alt="card-image-table" class="card-image">
+              <p class="badge dolar">API REST</p>
+              <h3 class="card-title">Projeto com foco em back-end, com Node.js e framework Express.js para criar uma API
+                REST.
+                Clique aqui para conferir a postagem do projeto</h3>
+              <div class="tech-icons">
+                <p class="ferrament-text"></p>
+                <img src="images/icon-nodejs.png" alt="HTML" title="HTML">
+                <img src="images/icon-express.js.png" alt="CSS" title="CSS">
+                <img src="images/icon-postman.png" alt="JavaScript" title="JavaScript">
+                <img src="images/icon-mongodb.png" alt="HTML" title="HTML">
+                <img src="images/html-icon.png" alt="CSS" title="CSS">
+              </div>
+              <button class="card-button 
+              material-symbols-outlined">arrow_forward</button>
+            </a>
+          </li>
+
+          <!--PROJETO4-->
+          <li class="card-item swiper-slide">
+            <a href="https://github.com/GuDev-07/Photographer" class="card-link">
+              <img src="images/project-photographer.png" alt="card-image-table" class="card-image">
+              <p class="badge aplicativo">Landing-page Photographer</p>
+              <h3 class="card-title">Sou fotógrafo aos finais de semana, construí para mim uma landing page. Afim de
+                auxiliar meu trabalho.</h3>
+              <div class="tech-icons">
+                <p class="ferrament-text"></p>
+                <img src="images/html-icon.png" alt="HTML" title="HTML">
+                <img src="images/icon-css.png" alt="CSS" title="CSS">
+                <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                <img src="images/icon-vercel.png" alt="vercel" title="Vercel">
+                <img src="images/icon-git.png" alt="git" title="Git">
+              </div>
+              <button class="card-button 
+              material-symbols-outlined">arrow_forward</button>
+            </a>
+          </li>
+
+          <!--PROJETO5-->
+          <li class="card-item swiper-slide">
+            <a href="https://github.com/GuDev-07/Brazilian-Football-Table" class="card-link">
+              <img src="images/table-brazileirao.png" alt="card-image-table" class="card-image">
+              <p class="badge table-brazil">Tabela Brasileirão</p>
+              <h3 class="card-title">Unindo duas paixões: Desenvolvimento e futebol em um só projeto. Simples, mas
+                enriquecedor.</h3>
+              <div class="tech-icons">
+                <p class="ferrament-text"></p>
+                <img src="images/html-icon.png" alt="HTML" title="HTML">
+                <img src="images/icon-css.png" alt="CSS" title="CSS">
+                <img src="images/js-icon.png" alt="JavaScript" title="JavaScript">
+                <img src="images/icon-vercel.png" alt="vercel" title="Vercel">
+                <img src="images/icon-git.png" alt="git" title="Git">
+              </div>
+              <button class="card-button 
+              material-symbols-outlined">arrow_forward</button>
+            </a>
+          </li>
+
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="images/project calculator.png" alt="card-image-table" class="card-image">
+              <p class="badge table-brazil">Triggo - Gestão de tarefas</p>
+              <h3 class="card-title">O Triggo é um sistema de gestão de tarefas desenvolvido em ASP.NET com C#,
+                oferecendo organização e planejamento</h3>
+              <div class="tech-icons">
+                <p class="ferrament-text"></p>
+                <img src="images/html-icon.png" alt="HTML" title="HTML">
+                <img src="images/icon-css.png" alt="CSS" title="CSS">
+                <img src="images/icon-c#.png" alt="C#" title="C#">
+                <img src="images/icon-SQL.png" alt="SQL" title="SQL">
+              </div>
+              <button class="card-button 
+              material-symbols-outlined">arrow_forward</button>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="review reveal" id="clientes">
+    <h2 class="title">O QUE DIZEM <span>SOBRE MIM?</span></h2>
+
+    <div class="container-people">
+      <div class="box-people">
+        <h2 class="coment" alt="comentario"></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+        <img src="images/test.jpg" class="user" alt="fotocliente">
+        <h3>João Marcelo</h3>
+      </div>
+
+      <div class="box-people">
+        <h2 class="coment" alt="comentario"></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+        <img src="images/test.jpg" class="user" alt="fotocliente">
+        <h3>Vitor - Delfim</h3>
+      </div>
+
+      <div class="box-people">
+        <h2 class="coment" alt="comentario"></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+        <img src="images/test.jpg" class="user" alt="fotocliente">
+        <h3>Thiago Castellani - Agiw sistemas</h3>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contact" class="contact reveal">
+    <h3 class="contact-title">ME <span>CONTATE</span></h3>
+    <form class="form-contact" id="form">
+      <div class="grupo-form">
+        <input type="text" placeholder="Nome" class="campo-form" required />
+      </div>
+      <div class="grupo-form">
+        <input type="email" placeholder="Email" class="campo-form" required />
+      </div>
+      <div class="grupo-form">
+        <textarea class="textform" placeholder="Será um prazer entrarmos em contato. O que deseja?" required></textarea>
+      </div>
+      <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+    </form>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
