@@ -85,21 +85,40 @@ body {
 .menu {
   display: flex;
   gap: 20px;
+  font-size: 1rem;
   list-style: none;
   justify-content: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Links */
 .menu-link {
+  position: relative;
   color: var(--claro);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.menu-link:hover {
-  color: var(--primaria)
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* distância da barrinha abaixo do texto */
+  width: 0%;
+  height: 2px;
+  background-color: var(--secundaria);
+  transition: width 0.3s ease;
 }
+
+.menu-link:hover {
+  color: var(--primaria);
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
 
 /* Ícone X */
 .btnClose {
@@ -221,7 +240,7 @@ body {
 .header .image-box img {
   max-width: 200%;
   height: auto;
-  animation: flutuar 4s ease-in-out infinite;
+  animation: flutuar 3s ease-in-out infinite;
   border-radius: 30px;
 }
 
@@ -233,7 +252,7 @@ body {
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 }
 
@@ -444,6 +463,116 @@ body {
   }
 }
 
+/* Seção Habilidades */
+#skills {
+  background: var(--maisescuro);
+  padding: 100px 10%;
+  color: var(--claro);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#skills h3 {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  color: var(--claro);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  text-shadow: 3px 2px rgba(0, 0, 0, 0.95);
+}
+
+#skills h3 span{
+  color: var(--primaria);
+  text-shadow: 3px 2px rgba(0, 0, 0, 0.95);
+}
+
+.cards-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.box-skills {
+  background: var(--vidro);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 30px 20px;
+  -webkit-box-shadow: -10px -1px 3px 3px rgba(0,0,0,0.76); 
+  box-shadow: -10px -1px 3px 3px rgba(0,0,0,0.76);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.box-skills:hover {
+  transform: translateY(-10px);
+}
+
+.box-skills p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primaria);
+}
+
+.box-skills img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.box-skills:hover img {
+  transform: scale(1.1);
+}
+
+/* Efeito decorativo de fundo */
+#skills::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: var(--primaria);
+  opacity: 0.1;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #skills {
+    padding: 60px 5%;
+  }
+
+  #skills h3 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .cards-skills {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+  }
+
+  .box-skills {
+    padding: 20px 15px;
+  }
+
+  .box-skills img {
+    width: 50px;
+  }
+}
+
+
 
 .metrics-section {
   background: var(--maisescuro);
@@ -547,25 +676,31 @@ body {
 
 .card-list .card-link .badge.dolar{
   color: var(--claro);
-  background: #017c26 ;
+  background: #01300f ;
   margin-bottom: 40px;
 }
 
-.card-list .card-link .badge.aplicativo{
+.card-list .card-link .badge.photographer{
   color: var(--claro);
-  background: #01704bf6;
+  background: #010370f6;
   margin-bottom: 40px;
 }
 
 .card-list .card-link .badge.password{
   color: var(--claro);
-  background: #011d5e;
+  background: #404CE7;
   margin-bottom: 40px;
 }
 
 .card-list .card-link .badge.table-brazil{
   color: var(--claro);
   background: #1d8d01;
+  margin-bottom: 40px;
+}
+
+.card-list .card-link .badge.triggo{
+  color: var(--claro);
+  background: #8d0101;
   margin-bottom: 40px;
 }
 
@@ -655,6 +790,14 @@ body {
   text-shadow: 4px 5px rgba(0, 0, 0, 0.95);
 }
 
+.review .description-section{
+  color: var(--claro);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  padding: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .review .title span {
   color: var(--primaria);
 }
@@ -688,8 +831,9 @@ body {
 }
 
 .box-people p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--claro);
+  text-shadow: 2px 2px rgb(0, 0, 0);
   margin-bottom: 20px;
 }
 
@@ -699,15 +843,28 @@ body {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
-  border: 2px solid var(--secundaria);
 }
 
 .box-people h3 {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: var(--secundaria);
+  color: var(--primaria);
+  text-shadow: 2px 2px rgb(0, 0, 0);
 }
 
+.ri-linkedin-box-fill{
+  font-size: 2rem;
+  color: var(--claro);
+  text-decoration: none;
+  border: none;
+  transition: 0.2s;
+}
+
+.ri-linkedin-box-fill:hover{
+  font-size: 2rem;
+  color: #0A66C2;
+  text-decoration: none;
+}
 /*MINHAS RECOMENDAÇÕES*/
 
 /*CONTATO*/
@@ -833,7 +990,6 @@ body {
 /*CONTATO*/
 
 /*responsividade espaçamento entre as seções*/
-
 @media (max-width: 768px){
   .metrics-section {
   padding: 10vh 10%;
@@ -846,6 +1002,64 @@ body {
   padding: 15vh 10%;
 }
 }
+
+.footer {
+  background-color: var(--maisescuro);
+  padding: 40px 0;
+  text-align: center;
+  color: var(--claro);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  color: var(--claro);
+  margin: 0 12px;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social .zap {
+  color: var(--claro);
+}
+
+.footer-social .zap:hover{
+  color: #07BF3E;
+}
+
+.footer-social .git {
+  color: var(--claro);
+}
+
+.footer-social .git:hover{
+  color: #000000;
+}
+
+.footer-social .linkedin {
+  color: var(--claro);
+}
+
+.footer-social .linkedin:hover{
+  color: #0A66C2;
+}
+
+
+.footer-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-shadow: 4px 2px rgba(0, 0, 0, 0.9);
+}
+
 
 
 /* ===== EFEITO DE APARECER AO ROLAR ===== */

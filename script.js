@@ -56,6 +56,24 @@ new Swiper('.card-wrapper', {
   }
 });
 
+new Swiper('.skills-swiper', {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }
+});
+
+
 const counters = document.querySelectorAll('.metric h3');
 
 const observer = new IntersectionObserver((entries, observer) => {
