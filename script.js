@@ -112,7 +112,7 @@ function enviarWhatsApp(event){
   const email = document.getElementById("email").value;
   const mensagem = document.getElementById("mensagem").value;
 
-  const texto = `Estou vindo do seu portfólio! %0Me chamo ${nome}. %0${mensagem}`;
+  const texto = `Estou vindo do seu portfólio! %0AMe chamo ${nome}. %0A${mensagem}`;
   const numero = "5515988036921"; // Substitua pelo seu número com DDD e código do país
   const url = `https://api.whatsapp.com/send?phone=${5515988036921}&text=${encodeURIComponent(texto)}`;
 
