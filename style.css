@@ -863,6 +863,10 @@ body {
   text-shadow: 2px 2px rgb(0, 0, 0);
 }
 
+a{
+  text-decoration: none;
+}
+
 .ri-linkedin-box-fill {
   font-size: 2rem;
   color: var(--claro);
